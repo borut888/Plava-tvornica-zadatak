@@ -1,0 +1,6 @@
+framework module Pods_PlavaTvornicaZadatakiOS {
+  umbrella header "Pods-PlavaTvornicaZadatakiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
