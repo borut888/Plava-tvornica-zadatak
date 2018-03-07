@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -340,17 +341,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PqF-bC-Rte">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PqF-bC-Rte">
                                 <rect key="frame" x="-34" y="0.0" width="376" height="376"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="376" id="2eJ-US-pme"/>
+                                    <constraint firstAttribute="width" secondItem="PqF-bC-Rte" secondAttribute="height" multiplier="1:1" id="2uk-Mi-eIy"/>
+                                    <constraint firstAttribute="width" constant="376" id="lFd-oh-JVJ"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yu-fz-yVJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yu-fz-yVJ">
                                 <rect key="frame" x="-70" y="592" width="180" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="I0K-L5-Mxc"/>
+                                    <constraint firstAttribute="width" secondItem="3yu-fz-yVJ" secondAttribute="height" multiplier="36:35" id="MDA-uA-9zf"/>
+                                    <constraint firstAttribute="width" constant="180" id="iS7-FA-sFg"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34J-Yd-NKY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34J-Yd-NKY">
                                 <rect key="frame" x="205" y="519" width="357" height="357"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-sN-43k">
                                         <rect key="frame" x="99" y="99" width="46" height="22"/>
@@ -364,6 +372,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="FOz-qk-vYA"/>
+                                    <constraint firstAttribute="width" constant="357" id="d4a-hr-Qvj"/>
+                                    <constraint firstAttribute="width" secondItem="34J-Yd-NKY" secondAttribute="height" multiplier="1:1" id="pbR-wi-X6W"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3u-ZU-qqy">
                                 <rect key="frame" x="0.0" y="383" width="206" height="43"/>
@@ -449,6 +462,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="34J-Yd-NKY" secondAttribute="bottom" constant="-209" id="GZj-a9-BR2"/>
+                            <constraint firstItem="3yu-fz-yVJ" firstAttribute="leading" secondItem="xJp-MD-lbG" secondAttribute="leading" constant="-70" id="Hbv-ti-Gkv"/>
+                            <constraint firstAttribute="trailing" secondItem="34J-Yd-NKY" secondAttribute="trailing" constant="-187" id="OVf-Ww-KNF"/>
+                            <constraint firstAttribute="bottom" secondItem="3yu-fz-yVJ" secondAttribute="bottom" constant="-100" id="SGf-Pb-2Ue"/>
+                            <constraint firstItem="PqF-bC-Rte" firstAttribute="leading" secondItem="xJp-MD-lbG" secondAttribute="leading" constant="-34" id="osQ-nx-RWk"/>
+                            <constraint firstItem="PqF-bC-Rte" firstAttribute="top" secondItem="xJp-MD-lbG" secondAttribute="top" id="zHA-CJ-cD1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h0A-F5-nn2"/>
                     </view>
                     <connections>
